@@ -30,7 +30,7 @@ export default function TaskModal({visible, onClose, onSave, taskToEdit}) {
                        placeholder={'Descrição'}
                        value={form.description}
                        onChangeText={v => setForm({
-                           ...form, description: v
+                           ...form, description: v--
                        })}
             />
             <TextInput style={styles.input}
