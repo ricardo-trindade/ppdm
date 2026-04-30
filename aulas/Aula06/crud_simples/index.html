@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de Produtos de Informática</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Produtos</h1>
+
+        <!-- Formulário para adicionar/editar produtos -->
+        <form id="produtoForm">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br><br>
+
+            <label for="preco">Preço:</label>
+            <input type="number" id="preco" name="preco" step="0.01" required><br><br>
+
+            <label for="disponibilidade">Disponibilidade:</label>
+            <select id="disponibilidade" name="disponibilidade">
+                <option value="Disponível">Disponível</option>
+                <option value="Indisponível">Indisponível</option>
+            </select><br><br>
+
+            <input  type="hidden" id="produtoId"> <!-- Campo oculto para edição -->
+            <button type="submit">Salvar</button>
+            <button type="button" id="cancelar">Cancelar</button>
+        </form>
+
+        <!-- Tabela para exibir a lista de produtos -->
+        <h2>Lista de Produtos</h2>
+        <table id="produtoTable">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Disponibilidade</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os dados dos produtos serão inseridos aqui pelo JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
